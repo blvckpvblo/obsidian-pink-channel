@@ -1,0 +1,31 @@
+{
+  "name": "obsidian-pink-channel",
+  "version": "0.0.1",
+  "description": "A light & dark them for Obsidian",
+  "main": "src/pink-channel.scss",
+  "scripts": {
+    "format:dev": "prettier --config .prettierrc --write \"src/**/*.{css,scss}\"",
+    "format:build": "prettier --config .prettierrc --write obsidian.css",
+    "format": "npm run format:dev && npm run format:build",
+    "dev": "sass --watch --no-source-map src/Pink\\ Channel.scss dev-vault/.obsidian/themes/Pink\\ Channel.css",
+    "build": "sass --no-source-map src/Pink\\ Channel.scss obsidian.css && npm run format:build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blvckpvblo/obsidian-pink-channel.git"
+  },
+  "keywords": [
+    "obsidian",
+    "theme"
+  ],
+  "author": "\"𝓜𝓸𝓶𝓪𝓻 🌈☀️\"",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blvckpvblo/obsidian-pink-channel/issues"
+  },
+  "homepage": "https://github.com/blvckpvblo/obsidian-pink-channel#readme",
+  "dependencies": {
+    "prettier": "^2.7.1",
+    "sass": "^1.53.0"
+  }
+}
