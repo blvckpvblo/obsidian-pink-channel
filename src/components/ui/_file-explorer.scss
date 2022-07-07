@@ -1,0 +1,30 @@
+@include ui-component {
+    [data-type="file-explorer"] {
+        $border-width: 5px;
+
+        .nav-files-container {
+            padding: 1rem;
+
+            .nav-folder-title,
+            .nav-file-title {
+                @include wrap-title-and-folder-name();
+
+                border-left: border($border-width, transparent);
+                transition: transition(background-color), transition(border-left), transition(color, $transition-speed-low);
+                margin-bottom: 0.25rem;
+
+                &:hover {
+                    border-left: border($border-width, var(--interactive-hover));
+                }
+
+                .nav-file {
+                    &-title {
+                        &.is-active {
+                            border-left: border($border-width, var(--interactive-accent));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

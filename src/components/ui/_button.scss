@@ -1,0 +1,7 @@
+@include ui-component {
+    button {
+        border-radius: $border-radius-default;
+        border: border($border-width-s, var(--color-border));
+        font-weight: $font-weight-medium;
+    }
+}
