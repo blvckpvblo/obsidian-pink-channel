@@ -7,7 +7,7 @@
     "format:dev": "prettier --config .prettierrc --write \"src/**/*.{css,scss}\"",
     "format:build": "prettier --config .prettierrc --write obsidian.css",
     "format": "npm run format:dev && npm run format:build",
-    "dev": "sass --watch --no-source-map src/Pink\\ Channel.scss dev-vault/.obsidian/themes/Pink\\ Channel.css",
+    "dev": "sass --watch --no-source-map \"src/Pink Channel.scss\" \"dev-vault/.obsidian/themes/Pink Channel.css\"",
     "build": "sass --no-source-map src/Pink\\ Channel.scss obsidian.css && npm run format:build"
   },
   "repository": {

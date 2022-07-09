@@ -1,0 +1,21 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 10 |                 @include wrap-title-and-folder-name();
+ *    |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   src\components\ui\_file-explorer.scss 10:17  @content
+ *   src\utils\_components.scss 3:9               ui-component()
+ *   src\components\ui\_file-explorer.scss 1:1    @import
+ *   src\components\index.scss 2:9                @import
+ *   src\Pink Channel.scss 5:9                    root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 10 \2502                  @include wrap-title-and-folder-name();\d\a    \2502                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   src\\components\\ui\\_file-explorer.scss 10:17  @content\a   src\\utils\\_components.scss 3:9               ui-component()\a   src\\components\\ui\\_file-explorer.scss 1:1    @import\a   src\\components\\index.scss 2:9                @import\a   src\\Pink Channel.scss 5:9                    root stylesheet";
+}

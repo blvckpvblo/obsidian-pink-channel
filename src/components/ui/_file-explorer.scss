@@ -7,10 +7,10 @@
 
             .nav-folder-title,
             .nav-file-title {
-                @include wrap-title-and-folder-name();
+                @include wrap-title-and-folder-names();
 
                 border-left: border($border-width, transparent);
-                transition: transition(background-color), transition(border-left), transition(color, $transition-speed-low);
+                transition: transition(background-color), transition(border-left), transition(color, $transition-speed-slow);
                 margin-bottom: 0.25rem;
 
                 &:hover {
