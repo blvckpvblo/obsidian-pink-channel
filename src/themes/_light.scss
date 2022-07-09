@@ -1,6 +1,6 @@
 .theme-light {
     --background-primary: var(--color-white);
-    --background-primary-alt: var(--color-beige-0);
+    --background-primary-alt: var(--color-beige-1);
     --background-secondary: var(--color-beige-0);
     --background-secondary-alt: var(--color-beige-1);
     --background-modifier-border: var(--color-beige-1);
@@ -12,8 +12,8 @@
     --background-modifier-error-rgb: 231, 104, 95;
     --background-modifier-error-hover: var(--color-red-4);
     --background-modifier-cover: rbga(0, 0, 0, 0.1);
-    --text-accent: var(--color-blue-5);
-    --text-accent-light: var(--color-blue-3);
+    --text-accent: var(--color-pink-5);
+    --text-accent-light: var(--color-pink-3);
     --text-accent-hover: var(--text-accent-light);
     --text-normal: var(--color-black);
     --text-code: var(--color-gray-7);
@@ -29,16 +29,16 @@
     --text-on-accent: var(--color-white);
     --interactive-normal: var(--color-gray-0);
     --interactive-hover: var(--color-gray-3);
-    --interactive-accent: var(--color-blue-3);
+    --interactive-accent: var(--color-pink-2);
     --interactive-accent-rgba: 152, 202, 215;
-    --interactive-accent-hover: var(--color-blue-4);
+    --interactive-accent-hover: var(--color-pink-3);
     --interactive-success: var(--color-green-5);
     --scrollbar-active-thumb-bg: var(--text-accent);
     --scrollbar-bg: var(--background-primary);
     --scrollbar-thumb-bg: var(--background-primary-alt);
     --highlight-mix-blend-mode: normal;
     --color-topic-tag-bg: rgba(152, 202, 215, 0.1);
-    --cursor-bg: var(--color-blue-4);
+    --cursor-bg: var(--color-pink-3);
     --active-line-bg: rgba(var(--text-muted-rgb), 0.25);
 
     --color-transparent: rgba(255, 255, 255, 0);
