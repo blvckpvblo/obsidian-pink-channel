@@ -1,0 +1,66 @@
+@mixin code-color {
+    color: var(--text-code);
+}
+
+@mixin code-block-style {
+    .HyperMD-codeblock {
+        @include code-color();
+    }
+}
+
+@mixin inline-code-style {
+    .cm-inline-code {
+        @include code-color();
+    }
+}
+
+@include editor-preview-component {
+    code {
+        @include code-color();
+
+        font-family: var(--font-monospace);
+        background-color: var(--background-secondary-alt);
+        border-radius: $border-radius-default;
+        font-size: 0.85em;
+    }
+
+    pre[class*="language"] {
+        border-radius: $border-radius-l;
+        background-color: var(--background-secondary);
+
+        &::webkit-scrollbar {
+            background-color: var(--background-secondary-alt);
+            border-radius: 0 0 $border-radius-l $border-radius-l;
+            height: 15px;
+
+            &-thumb {
+                background-color: var(--background-secondary);
+                border-radius: 0 0 $border-radius-l $border-radius-l;
+            }
+        }
+
+        *:not(.copy-code-button) {
+            background-color: transparent !important;
+        }
+
+        .copy-code-button {
+            background-color: var(--background-secondary-alt);
+
+            &:hover {
+                transition: transition(background-color), transition(color);
+                background-color: var(--interactive-accent);
+                color: var(--text-on-accent);
+            }
+        }
+    }
+}
+
+@include editor-source-component {
+    @include code-block-style();
+    @include inline-code-style();
+}
+
+@include editor-live-preview-component {
+    @include code-block-style();
+    @include inline-code-style();
+}
