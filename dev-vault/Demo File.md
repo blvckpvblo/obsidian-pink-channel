@@ -204,7 +204,7 @@ Or you can enclose the target in `<>`, such as:
 Text inside `backticks` on a line will be formatted like code.
 ```
 
-Text inside `backticks` on a line will be formatted like code. 
+Text inside `backticks` on a line will be formatted like code.
 
 
 ---
