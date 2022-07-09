@@ -6,7 +6,7 @@
 }
 
 @mixin h2Style {
-    @include h2Style;
+    @include h1Style;
 }
 
 @mixin h3Style {
@@ -57,6 +57,7 @@
     .HyperMD-header-1 {
         @include h1Style;
     }
+    
     .HyperMD-header-2 {
         @include h2Style;
     }
