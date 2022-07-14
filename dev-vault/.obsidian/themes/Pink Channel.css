@@ -415,10 +415,26 @@ body .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote .cm-quote {
   font-style: italic;
 }
 
+body .markdown-preview-view pre {
+  padding: calc(1rem * 1) calc((1rem / 2) * 1);
+  background-color: var(--background-secondary);
+}
+body .markdown-preview-view pre code {
+  color: var(--text-indented-color);
+}
+body .markdown-preview-view pre .copy-code-button {
+  background-color: transparent;
+  color: var(--text-muted);
+}
+body .markdown-preview-view pre .copy-code-button:hover {
+  transition: background-color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
 body .markdown-preview-view code {
   color: var(--text-code);
   font-family: var(--font-monospace);
-  background-color: var(--background-secondary-alt);
+  background-color: inherit;
   border-radius: 6px;
   font-size: 0.85em;
 }
@@ -439,7 +455,8 @@ body .markdown-preview-view pre[class*=language] *:not(.copy-code-button) {
   background-color: transparent !important;
 }
 body .markdown-preview-view pre[class*=language] .copy-code-button {
-  background-color: var(--background-secondary-alt);
+  background-color: transparent;
+  color: var(--text-muted);
 }
 body .markdown-preview-view pre[class*=language] .copy-code-button:hover {
   transition: background-color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -459,6 +476,9 @@ body .markdown-source-view.mod-cm6 .HyperMD-codeblock {
 }
 body .markdown-source-view.mod-cm6 .cm-inline-code {
   color: var(--text-code);
+}
+body .markdown-source-view.mod-cm6 .cm-hmd-indented-code {
+  color: var(--text-indented-color);
 }
 
 body .markdown-source-view .CodeMirror .CodeMirror-cursor {
@@ -881,6 +901,7 @@ body .markdown-preview-view .search-highlight > div.is-active {
   --file-embed-hover-color: var(--color-gray-4);
   --blockquote-border-color: var(--color-beige-3);
   --text-footnote: var(--color-gray-6);
+  --text-indented-color: var(--color-blue-5);
   --color-transparent: rgba(255, 255, 255, 0);
   --color-border: rgba(0, 0, 0, 0.2);
 }

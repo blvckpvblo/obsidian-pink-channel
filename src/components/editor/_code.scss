@@ -14,12 +14,36 @@
     }
 }
 
+@mixin copy-button-style {
+    .copy-code-button {
+        background-color: transparent;
+        color: var(--text-muted);
+
+        &:hover {
+            transition: transition(background-color), transition(color);
+            background-color: var(--interactive-accent);
+            color: var(--text-on-accent);
+        }
+    }
+}
+
 @include editor-preview-component {
+    pre {
+        padding: $space $space-s;
+        background-color: var(--background-secondary);
+
+        code {
+            color: var(--text-indented-color);
+        }
+
+        @include copy-button-style();
+    }
+
     code {
         @include code-color();
 
         font-family: var(--font-monospace);
-        background-color: var(--background-secondary-alt);
+        background-color: inherit;
         border-radius: $border-radius-default;
         font-size: 0.85em;
     }
@@ -43,15 +67,7 @@
             background-color: transparent !important;
         }
 
-        .copy-code-button {
-            background-color: var(--background-secondary-alt);
-
-            &:hover {
-                transition: transition(background-color), transition(color);
-                background-color: var(--interactive-accent);
-                color: var(--text-on-accent);
-            }
-        }
+        @include copy-button-style();
     }
 }
 
@@ -63,4 +79,8 @@
 @include editor-live-preview-component {
     @include code-block-style();
     @include inline-code-style();
+
+    .cm-hmd-indented-code {
+        color: var(--text-indented-color);
+    }
 }
