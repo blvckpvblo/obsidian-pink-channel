@@ -649,36 +649,47 @@ body .markdown-preview-view p {
 
 body .markdown-preview-view .tag:not(.token) {
   background: var(--color-topic-tag-bg);
-  color: var(--text-accent-light);
+  color: var(--background-primary);
   font-size: 0.75rem;
+  font-weight: 900;
   text-decoration: none;
   font-family: var(--editor-font);
-  padding-top: 2px;
-  padding-right: 5px;
-  padding-bottom: 2px;
-  padding-left: 5px;
-  border-radius: 2px;
-  border: 1px, solid, var(--text-accent-light);
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 6px;
+  padding-left: 6px;
+  border-radius: 8px;
+  border: 1px, solid, var(--background-primary);
 }
 
 body .markdown-source-view.mod-cm6 .cm-hashtag-begin,
 body .markdown-source-view.mod-cm6 .cm-hashtag-end {
   background: var(--color-topic-tag-bg);
-  color: var(--text-accent-light);
+  color: var(--background-primary);
   font-size: 0.75rem;
+  font-weight: 900;
   text-decoration: none;
   font-family: var(--editor-font);
 }
 body .markdown-source-view.mod-cm6 .cm-hashtag-begin {
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 6px;
   border-radius: 8px 0 0 8px;
-  border-top: 2px;
-  border-bottom: 2px;
-  border-right: 5px;
-  border-left: 5px;
+  border-top: 3px;
+  border-bottom: 3px;
+  border-right: 6px;
+  border-left: 6px;
+}
+body .markdown-source-view.mod-cm6 .cm-hashtag-end {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-right: 6px;
+  border-radius: 0 8px 8px 0;
+  border-top: 3px;
+  border-bottom: 3px;
+  border-right: 6px;
+  border-left: 6px;
 }
 
 body .markdown-preview-view ul.contains-task-list .task-list-item {
@@ -842,7 +853,7 @@ body .markdown-preview-view .search-highlight > div.is-active {
   --scrollbar-bg: var(--background-primary);
   --scrollbar-thumb-bg: var(--background-primary-alt);
   --highlight-mix-blend-mode: normal;
-  --color-topic-tag-bg: rgba(152, 202, 215, 0.1);
+  --color-topic-tag-bg: var(--color-orange-4);
   --cursor-bg: var(--color-pink-3);
   --active-line-bg: rgba(var(--text-muted-rgb), 0.25);
   --file-embed-border-color: var(--color-beige-4);

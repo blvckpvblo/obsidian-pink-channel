@@ -153,12 +153,6 @@ http://obsidian.md - automatic!
 
 #### Obsidian URI links
 
-[[This note doesn't exist]]
-
-[[New Hurricane Note|This is my alias and new stuff]]
-
-[[This note doesn't exist|My Alias]]
-
 [[ symbolUsing obsidian URI|Obsidian URI]] links can be used to open notes in Obsidian either from another Obsidian vault or another program.
 
 For example, you can link to a file in a vault like so (please note the [[Using obsidian URI#Encoding|required encoding]]):

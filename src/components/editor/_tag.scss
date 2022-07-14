@@ -1,8 +1,8 @@
-$tag-padding-top: 2px;
-$tag-padding-side: 5px;
-$tag-padding-bottom: 2px;
+$tag-padding-top: 3px;
+$tag-padding-side: 6px;
+$tag-padding-bottom: 3px;
 $tag-border-radius: $border-radius-tag;
-$tag-font-color: var(--text-accent-light);
+$tag-font-color: var(--background-primary);
 $tag-background-color: var(--color-topic-tag-bg);
 $tag-border-style: border(1px, $tag-font-color);
 $tag-font-size: 0.75rem;
@@ -11,6 +11,7 @@ $tag-font-size: 0.75rem;
     background: $tag-background-color;
     color: $tag-font-color;
     font-size: $tag-font-size;
+    font-weight: $font-weight-black;
     text-decoration: none;
     font-family: var(--editor-font);
 }
@@ -21,11 +22,11 @@ $tag-font-size: 0.75rem;
 
         padding: {
             top: $tag-padding-top;
-            right: $tag-padding-side;
             bottom: $tag-padding-bottom;
+            right: $tag-padding-side;
             left: $tag-padding-side;
         }
-        border-radius: $tag-padding-top;
+        border-radius: $tag-border-radius;
         border: $tag-border-style;
     }
 }
@@ -40,10 +41,24 @@ $tag-font-size: 0.75rem;
         padding: {
             top: $tag-padding-top;
             bottom: $tag-padding-bottom;
-            right: $tag-padding-side;
             left: $tag-padding-side;
         }
         border-radius: $tag-border-radius 0 0 $tag-border-radius;
+        border: {
+            top: $tag-padding-top;
+            bottom: $tag-padding-bottom;
+            right: $tag-padding-side;
+            left: $tag-padding-side;
+        }
+    }
+
+    .cm-hashtag-end {
+        padding: {
+            top: $tag-padding-top;
+            bottom: $tag-padding-bottom;
+            right: $tag-padding-side;
+        }
+        border-radius: 0 $tag-border-radius $tag-border-radius 0;
         border: {
             top: $tag-padding-top;
             bottom: $tag-padding-bottom;
