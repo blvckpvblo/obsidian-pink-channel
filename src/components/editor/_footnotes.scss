@@ -1,0 +1,27 @@
+@include editor-live-preview-component {
+    .HyperMD-footnote {
+        color: var(--text-footnote);
+    }
+
+    .cm-footref {
+        color: var(--text-accent);
+    }
+
+    .cm-hmd-footnote {
+        color: var(--text-accent);
+
+        .cm-underline {
+            text-decoration: none;
+        }
+    }
+}
+
+@include editor-preview-component {
+    .footnotes {
+        color: var(--text-footnote);
+    }
+
+    .footnote-link {
+        color: var(--text-accent);
+    }
+}
