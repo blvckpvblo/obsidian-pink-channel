@@ -1,10 +1,29 @@
+@mixin hover {
+    border-color: var(--file-embed-border-color);
+    color: var(--file-embed-hover-color);
+}
+
 @include editor-preview-component {
     .file-embed {
-        border: none;
-        border-radius: $border-radius-s;
+        padding: $space;
+
+        &:hover {
+            @include hover();
+        }
 
         .file-embed-link {
             top: 2rem;
+        }
+    }
+}
+
+@include editor-live-preview-component {
+    .file-embed {
+        padding: $space-s;
+        color: var(--file-embed-color);
+
+        &:hover {
+            @include hover();
         }
     }
 }
