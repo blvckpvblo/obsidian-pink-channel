@@ -474,62 +474,70 @@ body .markdown-source-view.mod-cm6 .cm-link {
 }
 
 body .markdown-preview-view .file-embed {
-  border: none;
-  border-radius: 4px;
+  padding: calc(1rem * 1);
+}
+body .markdown-preview-view .file-embed:hover {
+  border-color: var(--file-embed-border-color);
+  color: var(--file-embed-hover-color);
 }
 body .markdown-preview-view .file-embed .file-embed-link {
   top: 2rem;
 }
 
+body .markdown-source-view.mod-cm6 .file-embed {
+  padding: calc((1rem / 2) * 1);
+  color: var(--file-embed-color);
+}
+body .markdown-source-view.mod-cm6 .file-embed:hover {
+  border-color: var(--file-embed-border-color);
+  color: var(--file-embed-hover-color);
+}
+
 body .markdown-preview-view h1 {
-  border-bottom: 1px solid var(--background-secondary-alt);
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1.25;
-  padding-bottom: calc((1rem / 2) * 1);
 }
 body .markdown-preview-view h2 {
-  border-bottom: 1px solid var(--background-secondary-alt);
-  font-weight: 600;
+  font-weight: 900;
   line-height: 1.25;
-  padding-bottom: calc((1rem / 2) * 1);
+  font-weight: 700;
 }
 body .markdown-preview-view h3 {
-  font-weight: 600;
+  font-weight: 700;
 }
 body .markdown-preview-view h4 {
-  font-weight: 600;
+  font-weight: 700;
 }
 body .markdown-preview-view h5 {
-  font-style: italic;
+  font-weight: 600;
 }
 body .markdown-preview-view h6 {
-  font-style: italic;
+  font-weight: 600;
+  color: var(--text-normal);
   font-weight: 400;
 }
 
-body .markdown-source-view.mod-cm6 .HyperMD-header-1 {
-  border-bottom: 1px solid var(--background-secondary-alt);
-  font-weight: 600;
+body .markdown-source-view.mod-cm6 .cm-header-1 {
+  font-weight: 900;
   line-height: 1.25;
-  padding-bottom: calc((1rem / 2) * 1);
 }
-body .markdown-source-view.mod-cm6 .HyperMD-header-2 {
-  border-bottom: 1px solid var(--background-secondary-alt);
-  font-weight: 600;
+body .markdown-source-view.mod-cm6 .cm-header-2 {
+  font-weight: 900;
   line-height: 1.25;
-  padding-bottom: calc((1rem / 2) * 1);
+  font-weight: 700;
 }
-body .markdown-source-view.mod-cm6 .HyperMD-header-3 {
+body .markdown-source-view.mod-cm6 .cm-header-3 {
+  font-weight: 700;
+}
+body .markdown-source-view.mod-cm6 .cm-header-4 {
+  font-weight: 700;
+}
+body .markdown-source-view.mod-cm6 .cm-header-5 {
   font-weight: 600;
 }
-body .markdown-source-view.mod-cm6 .HyperMD-header-4 {
+body .markdown-source-view.mod-cm6 .cm-header-6 {
   font-weight: 600;
-}
-body .markdown-source-view.mod-cm6 .HyperMD-header-5 {
-  font-style: italic;
-}
-body .markdown-source-view.mod-cm6 .HyperMD-header-6 {
-  font-style: italic;
+  color: var(--text-normal);
   font-weight: 400;
 }
 
@@ -545,9 +553,11 @@ body .markdown-preview-view .internal-link:hover {
 body .markdown-source-view.mod-cm6 .cm-hmd-internal-link {
   font-weight: 700;
 }
-
-body .markdown-source-view .CodeMirror .cm-hmd-internal-link {
-  font-weight: 700;
+body .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover {
+  cursor: pointer;
+}
+body .markdown-source-view.mod-cm6 .cm-hmd-internal-link .cm-underline {
+  text-decoration: none;
 }
 
 body .markdown-preview-view ul, body .markdown-preview-view ol {
@@ -826,6 +836,9 @@ body .markdown-preview-view .search-highlight > div.is-active {
   --color-topic-tag-bg: rgba(152, 202, 215, 0.1);
   --cursor-bg: var(--color-pink-3);
   --active-line-bg: rgba(var(--text-muted-rgb), 0.25);
+  --file-embed-border-color: var(--color-beige-4);
+  --file-embed-color: var(--color-gray-2);
+  --file-embed-hover-color: var(--color-gray-4);
   --color-transparent: rgba(255, 255, 255, 0);
   --color-border: rgba(0, 0, 0, 0.2);
 }
