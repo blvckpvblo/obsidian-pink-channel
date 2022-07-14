@@ -1,15 +1,27 @@
 @include editor-preview-component {
     blockquote {
-        padding: $space $space-xl;
+        padding: $space;
         margin: 0 0 $space 0;
 
         background: var(--background-primary-alt);
-        color: var(--text-normal);
+        color: var(--text-code);
         font-style: italic;
         line-height: $line-height-l;
 
         border-radius: $border-radius-default;
         border-width: 1px;
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    }
+}
+
+@include editor-live-preview-component {
+    &.is-live-preview .HyperMD-quote {
+        padding: $space;
+        background-color: var(--background-primary-alt);
+        border-left-color: var(--blockquote-border-color);
+        
+        .cm-quote {
+            color: var(--text-code);
+            font-style: italic;
+        }
     }
 }
