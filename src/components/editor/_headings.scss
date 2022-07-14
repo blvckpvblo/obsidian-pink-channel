@@ -1,16 +1,16 @@
 @mixin h1Style {
-    border-bottom: 1px solid var(--background-secondary-alt);
-    font-weight: 600;
+    font-weight: $font-weight-black;
     line-height: $line-height-s;
-    padding-bottom: $space-s;
 }
 
 @mixin h2Style {
     @include h1Style;
+
+    font-weight: $font-weight-bold;
 }
 
 @mixin h3Style {
-    font-weight: 600;
+    font-weight: $font-weight-bold;
 }
 
 @mixin h4Style {
@@ -18,13 +18,14 @@
 }
 
 @mixin h5Style {
-    font-style: italic;
+    font-weight: $font-weight-medium;
 }
 
 @mixin h6Style {
     @include h5Style;
 
-    font-weight: 400;
+    color: var(--text-normal);
+    font-weight: $font-weight-normal;
 }
 
 @include editor-preview-component {
@@ -54,27 +55,27 @@
 }
 
 @include editor-live-preview-component {
-    .HyperMD-header-1 {
+    .cm-header-1 {
         @include h1Style;
     }
     
-    .HyperMD-header-2 {
+    .cm-header-2 {
         @include h2Style;
     }
 
-    .HyperMD-header-3 {
+    .cm-header-3 {
         @include h3Style;
     }
 
-    .HyperMD-header-4 {
+    .cm-header-4 {
         @include h4Style;
     }
 
-    .HyperMD-header-5 {
+    .cm-header-5 {
         @include h5Style;
     }
 
-    .HyperMD-header-6 {
+    .cm-header-6 {
         @include h6Style;
     }
 }
