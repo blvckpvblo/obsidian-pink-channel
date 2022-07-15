@@ -389,6 +389,10 @@ body .workspace-tab-container-before.is-before-active {
 body .workspace-leaf-resize-handle {
   background-color: var(--color-transparent);
 }
+body .workspace-leaf-resize-handle:hover {
+  background-color: var(--interactive-accent);
+  border-color: var(--interactive-accent);
+}
 
 body .markdown-source-view .CodeMirror .CodeMirror-activeline {
   background: var(--active-line-bg);
@@ -993,9 +997,9 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
   --interactive-accent-rgba: 152, 202, 215;
   --interactive-accent-hover: var(--color-pink-3);
   --interactive-success: var(--color-green-5);
-  --scrollbar-active-thumb-bg: var(--text-accent);
+  --scrollbar-active-thumb-bg: var(--interactive-accent-hover);
   --scrollbar-bg: var(--background-primary);
-  --scrollbar-thumb-bg: var(--background-primary-alt);
+  --scrollbar-thumb-bg: var(--interactive-accent);
   --highlight-mix-blend-mode: normal;
   --color-topic-tag-bg: var(--color-orange-4);
   --cursor-bg: var(--color-pink-3);
