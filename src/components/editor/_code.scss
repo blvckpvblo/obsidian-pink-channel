@@ -39,6 +39,12 @@
         @include copy-button-style();
     }
 
+    p code {
+        padding: 0 $space-xxs;
+        color: var(--backticks-text-color);
+        background-color: var(--color-gray-0);
+    }
+
     code {
         @include code-color();
 
@@ -79,6 +85,16 @@
 @include editor-live-preview-component {
     @include code-block-style();
     @include inline-code-style();
+
+    .cm-formatting-code {
+        background-color: var(--backticks-bg);
+    }
+
+    .cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+        padding: 0 $space-xxs;
+        color: var(--backticks-text-color);
+        background-color: var(--backticks-bg);
+    }
 
     .cm-hmd-indented-code {
         color: var(--text-indented-color);

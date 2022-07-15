@@ -431,6 +431,11 @@ body .markdown-preview-view pre .copy-code-button:hover {
   background-color: var(--interactive-accent);
   color: var(--text-on-accent);
 }
+body .markdown-preview-view p code {
+  padding: 0 calc((1rem / 8) * 1);
+  color: var(--backticks-text-color);
+  background-color: var(--color-gray-0);
+}
 body .markdown-preview-view code {
   color: var(--text-code);
   font-family: var(--font-monospace);
@@ -476,6 +481,14 @@ body .markdown-source-view.mod-cm6 .HyperMD-codeblock {
 }
 body .markdown-source-view.mod-cm6 .cm-inline-code {
   color: var(--text-code);
+}
+body .markdown-source-view.mod-cm6 .cm-formatting-code {
+  background-color: var(--backticks-bg);
+}
+body .markdown-source-view.mod-cm6 .cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+  padding: 0 calc((1rem / 8) * 1);
+  color: var(--backticks-text-color);
+  background-color: var(--backticks-bg);
 }
 body .markdown-source-view.mod-cm6 .cm-hmd-indented-code {
   color: var(--text-indented-color);
@@ -902,6 +915,8 @@ body .markdown-preview-view .search-highlight > div.is-active {
   --blockquote-border-color: var(--color-beige-3);
   --text-footnote: var(--color-gray-6);
   --text-indented-color: var(--color-blue-5);
+  --backticks-text-color: var(--color-blue-6);
+  --backticks-bg: var(--color-gray-0);
   --color-transparent: rgba(255, 255, 255, 0);
   --color-border: rgba(0, 0, 0, 0.2);
 }
