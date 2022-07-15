@@ -1,0 +1,59 @@
+@include ui-component {
+    #calendar-container {
+        .nav {
+            .title {
+                color: var(--calendar-title);
+
+                .year {
+                    color: var(--text-accent-light);
+                }
+            }
+
+            .right-nav {
+                .reset-button {
+                    color: var(--calendar-title);
+                }
+
+                .arrow svg {
+                    color: var(--calendar-title);
+                }
+            }
+        }
+
+        .calendar {
+            thead tr th {
+                color: var(--interactive-accent);
+            }
+
+            tbody tr td {
+                .day {
+                    color: var(--calendar-title);
+                    font-weight: $font-weight-medium;
+
+                    &.active {
+                        color: var(--background-primary);
+                    }
+
+                    .dot-container {
+                        .dot.filled {
+                            fill: var(--background-primary);
+                        }
+
+                        .hollow {
+                            stroke: var(--background-primary);
+                        }
+                    }
+
+                    &:hover {
+                        color: var(--background-primary);
+                        background-color: var(--interactive-accent);
+                    }
+                }
+
+                .today:hover {
+                    background-color: var(--text-accent-light);
+                }
+            }
+        }
+    }
+}

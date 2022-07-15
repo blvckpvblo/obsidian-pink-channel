@@ -821,6 +821,42 @@ body .markdown-preview-view .search-highlight > div.is-active {
   border-bottom: 2px, dashed, var(--color-blue-3);
 }
 
+body #calendar-container .nav .title {
+  color: var(--calendar-title);
+}
+body #calendar-container .nav .title .year {
+  color: var(--text-accent-light);
+}
+body #calendar-container .nav .right-nav .reset-button {
+  color: var(--calendar-title);
+}
+body #calendar-container .nav .right-nav .arrow svg {
+  color: var(--calendar-title);
+}
+body #calendar-container .calendar thead tr th {
+  color: var(--interactive-accent);
+}
+body #calendar-container .calendar tbody tr td .day {
+  color: var(--calendar-title);
+  font-weight: 600;
+}
+body #calendar-container .calendar tbody tr td .day.active {
+  color: var(--background-primary);
+}
+body #calendar-container .calendar tbody tr td .day .dot-container .dot.filled {
+  fill: var(--background-primary);
+}
+body #calendar-container .calendar tbody tr td .day .dot-container .hollow {
+  stroke: var(--background-primary);
+}
+body #calendar-container .calendar tbody tr td .day:hover {
+  color: var(--background-primary);
+  background-color: var(--interactive-accent);
+}
+body #calendar-container .calendar tbody tr td .today:hover {
+  background-color: var(--text-accent-light);
+}
+
 .workspace-leaf .kanban-plugin {
   background-color: var(--background-primary);
 }
@@ -972,6 +1008,7 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
   --text-indented-color: var(--color-blue-5);
   --backticks-text-color: var(--color-blue-6);
   --backticks-bg: var(--color-gray-0);
+  --calendar-title: var(--color-gray-8);
   --color-transparent: rgba(255, 255, 255, 0);
   --color-border: rgba(0, 0, 0, 0.2);
 }
