@@ -821,6 +821,53 @@ body .markdown-preview-view .search-highlight > div.is-active {
   border-bottom: 2px, dashed, var(--color-blue-3);
 }
 
+.workspace-leaf .kanban-plugin {
+  background-color: var(--background-primary);
+}
+.workspace-leaf .kanban-plugin__lane {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+.workspace-leaf .kanban-plugin__item {
+  border-radius: 10px;
+}
+.workspace-leaf .kanban-plugin__item-title-wrapper {
+  padding: calc((1rem / 2) * 1);
+}
+.workspace-leaf .kanban-plugin__item-form textarea {
+  border-radius: 10px;
+}
+.workspace-leaf .kanban-plugin__item-form textarea:focus {
+  border-width: 2px;
+}
+.workspace-leaf .kanban-plugin__item-markdown div p {
+  overflow-x: unset;
+}
+
+body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
+  transition: transtion(box-shadow);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+}
+body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf.mod-active {
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25) !important;
+}
+body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
+  background: var(--background-primary);
+  border-left: 3px solid var(--interactive-normal);
+  border-right: 3px solid var(--background-primary);
+}
+body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
+  left: 4px;
+}
+body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-title-container:after, body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-title-container:before {
+  display: none;
+}
+body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod.active > .workspace-leaf-content > .view-header {
+  background: var(--background-primary);
+  border-left: 3px solid var(--interactive-accent);
+  border-right: 3px solid var(--background-primary);
+}
+
 .theme-dark {
   --background-primary: var(--color-black);
   --background-primary-alt: var(--color-gray-9);
