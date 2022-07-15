@@ -11,7 +11,7 @@ kanban-plugin: basic
 
 ## Backlog
 
-- [ ] #demo Blah Blah @{2022-08-17}
+- [ ] #demo #file #tags Blah Blah @{2022-08-17}
 
 
 

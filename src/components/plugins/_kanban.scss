@@ -30,5 +30,9 @@
         &__item-markdown div p {
             overflow-x: unset;
         }
+
+        &__item-tags .tag {
+            color: var(--text-muted);
+        }
     }
 }

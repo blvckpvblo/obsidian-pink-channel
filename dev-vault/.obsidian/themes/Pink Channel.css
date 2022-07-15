@@ -233,10 +233,10 @@ body .prompt {
   padding: calc((2rem) * 1);
 }
 body .prompt-input {
-  background-color: var(--background-primary-alt);
+  background-color: var(--background-primary);
   border-radius: 18px;
   margin-bottom: calc(1rem * 1);
-  padding: calc(1rem * 1) !important;
+  padding: calc((1rem / 2) * 1) calc(1rem * 1) !important;
   height: initial;
   font-size: 1.15rem;
   flex-shrink: 0;
@@ -251,11 +251,13 @@ body .prompt-results .suggestion-item {
 }
 body .prompt-results .suggestion-item .suggestion-hotkey {
   position: relative;
-  top: 0.25rem;
+  top: -0.13rem;
+  background-color: var(--background-primary-alt);
+  color: var(--text-code);
 }
 body .prompt-results .suggestion-item.is-selected {
   background-color: var(--background-secondary-alt);
-  color: var(--interactive-accent);
+  color: var(--text-normal);
   border-left: 5px, solid, var(--interactive-accent);
 }
 
@@ -299,15 +301,15 @@ body .status-bar {
   max-height: none;
   height: 27px;
   width: 100%;
-  background-color: var(--background-primary);
+  background-color: var(--background-primary-alt);
   color: var(--text-muted);
   font-size: 14px;
   font-family: var(--editor-font);
   line-height: 1;
-  border-top: 1px, solid, var(--background-secondary);
   gap: calc(1rem * 1);
-  padding: calc((1rem / 4) * 1) calc(1rem * 1);
+  padding: calc((1rem / 4) * 1) calc((2rem) * 1);
   user-select: none;
+  border-top: none;
 }
 body .status-bar-item, body .status-bar-item-segment {
   display: flex;
@@ -706,7 +708,7 @@ body .markdown-preview-view p {
 
 body .markdown-preview-view .tag:not(.token) {
   background: var(--color-topic-tag-bg);
-  color: var(--background-primary);
+  color: var(--color-topic-tag);
   font-size: 0.75rem;
   font-weight: 900;
   text-decoration: none;
@@ -716,13 +718,13 @@ body .markdown-preview-view .tag:not(.token) {
   padding-right: 6px;
   padding-left: 6px;
   border-radius: 8px;
-  border: 1px, solid, var(--background-primary);
+  border: 1px, solid, var(--color-topic-tag);
 }
 
 body .markdown-source-view.mod-cm6 .cm-hashtag-begin,
 body .markdown-source-view.mod-cm6 .cm-hashtag-end {
   background: var(--color-topic-tag-bg);
-  color: var(--background-primary);
+  color: var(--color-topic-tag);
   font-size: 0.75rem;
   font-weight: 900;
   text-decoration: none;
@@ -883,6 +885,9 @@ body #calendar-container .calendar tbody tr td .today:hover {
 .workspace-leaf .kanban-plugin__item-markdown div p {
   overflow-x: unset;
 }
+.workspace-leaf .kanban-plugin__item-tags .tag {
+  color: var(--text-muted);
+}
 
 body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf {
   transition: transtion(box-shadow);
@@ -893,7 +898,7 @@ body.plugin-sliding-panes-stacking .workspace > .mod-root > .workspace-leaf.mod-
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header {
   background: var(--background-primary);
-  border-left: 3px solid var(--interactive-normal);
+  border-left: 2px solid var(--background-primary-alt);
   border-right: 3px solid var(--background-primary);
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf > .workspace-leaf-content > .view-header .view-header-icon {
@@ -904,7 +909,7 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
 }
 body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-leaf.mod.active > .workspace-leaf-content > .view-header {
   background: var(--background-primary);
-  border-left: 3px solid var(--interactive-accent);
+  border-left: 2px solid var(--interactive-accent);
   border-right: 3px solid var(--background-primary);
 }
 
@@ -1001,6 +1006,7 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
   --scrollbar-bg: var(--background-primary);
   --scrollbar-thumb-bg: var(--interactive-accent);
   --highlight-mix-blend-mode: normal;
+  --color-topic-tag: var(--color-white);
   --color-topic-tag-bg: var(--color-orange-4);
   --cursor-bg: var(--color-pink-3);
   --active-line-bg: rgba(var(--text-muted-rgb), 0.25);
