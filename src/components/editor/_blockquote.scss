@@ -3,8 +3,8 @@
         padding: $space;
         margin: 0 0 $space 0;
 
-        background: var(--background-secondary-alt);
-        color: var(--text-code);
+        background: var(--blockquote-bg);
+        color: var(--blockquote-font-color);
         font-style: italic;
         line-height: $line-height-l;
 
@@ -17,11 +17,11 @@
 @include editor-live-preview-component {
     &.is-live-preview .HyperMD-quote {
         padding: $space;
-        background-color: var(--background-secondary-alt);
+        background-color: var(--blockquote-bg);
         border-left-color: var(--blockquote-border-color);
         
         .cm-quote {
-            color: var(--text-code);
+            color: var(--blockquote-font-color);
             font-style: italic;
         }
     }
