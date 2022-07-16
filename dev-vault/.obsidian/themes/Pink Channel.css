@@ -15,7 +15,8 @@
   --color-gray-6: #666666;
   --color-gray-7: #525252;
   --color-gray-8: #3D3D3D;
-  --color-gray-9: #292929;
+  --color-gray-9: #1F1F1F;
+  --color-gray-10: #141414;
   --color-pink-0: #FDEDEC;
   --color-pink-1: #FAC8C7;
   --color-pink-2: #F58B89;
@@ -139,6 +140,7 @@ body .dropdown {
   border-width: 1px;
   border-color: var(--background-modifier-border);
   border-radius: 6px;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOTIuNCIgaGVpZ2h0PSIyOTIuNCI+PHBhdGggZmlsbD0iI0YyNkI2OSIgZD0iTTI4NyA2OS40YTE3LjYgMTcuNiAwIDAgMC0xMy01LjRIMTguNGMtNSAwLTkuMyAxLjgtMTIuOSA1LjRBMTcuNiAxNy42IDAgMCAwIDAgODIuMmMwIDUgMS44IDkuMyA1LjQgMTIuOWwxMjggMTI3LjljMy42IDMuNiA3LjggNS40IDEyLjggNS40czkuMi0xLjggMTIuOC01LjRMMjg3IDk1YzMuNS0zLjUgNS40LTcuOCA1LjQtMTIuOCAwLTUtMS45LTkuMi01LjUtMTIuOHoiLz48L3N2Zz4=);
   cursor: pointer;
 }
 
@@ -384,8 +386,8 @@ body .markdown-source-view.mod-cm6 .cm-active {
 body .markdown-preview-view blockquote {
   padding: calc(1rem * 1);
   margin: 0 0 calc(1rem * 1) 0;
-  background: var(--background-secondary-alt);
-  color: var(--text-code);
+  background: var(--blockquote-bg);
+  color: var(--blockquote-font-color);
   font-style: italic;
   line-height: 2;
   border-radius: 6px;
@@ -395,11 +397,11 @@ body .markdown-preview-view blockquote {
 
 body .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
   padding: calc(1rem * 1);
-  background-color: var(--background-secondary-alt);
+  background-color: var(--blockquote-bg);
   border-left-color: var(--blockquote-border-color);
 }
 body .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote .cm-quote {
-  color: var(--text-code);
+  color: var(--blockquote-font-color);
   font-style: italic;
 }
 
@@ -685,6 +687,10 @@ body .markdown-preview-view p {
   line-height: 1.5;
 }
 
+body .markdown-source-view.mod-cm6 .cm-line {
+  line-height: 2;
+}
+
 body .markdown-preview-view .tag:not(.token) {
   background: var(--color-topic-tag-bg);
   color: var(--color-topic-tag);
@@ -893,55 +899,43 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
 }
 
 .theme-dark {
-  --background-primary: var(--color-black);
+  --background-primary: var(--color-gray-10);
   --background-primary-alt: var(--color-gray-9);
   --background-secondary: var(--color-gray-9);
-  --background-secondary-alt: var(--background-primary);
-  --background-modifier-border: var(--color-gray-1);
-  --background-modifier-form-field: var(--color-gray-9);
-  --background-modifier-form-field-highlighted: var(--color-gray-9);
-  --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
-  --background-modifier-success: var(--color-green-4);
-  --background-modifier-error: var(--color-red-4);
-  --background-modifier-error-rgb: 231, 104, 95;
-  --background-modifier-error-hover: var(--color-red-4);
-  --background-modifier-cover: rbga(0, 0, 0, 0.1);
-  --text-accent: var(--color-pink-2);
-  --text-accent-light: var(--color-pink-1);
-  --text-accent-hover: var(--text-accent-light);
-  --text-normal: var(--color-white);
-  --text-code: var(--color-gray-1);
-  --text-muted: var(--color-gray-5);
-  --text-muted-rgb: 143, 143, 143;
-  --text-faint: var(--color-gray-5);
-  --text-bright: var(--color-black);
-  --text-error: var(--color-red-6);
-  --text-error-hover: var(--color-red-7);
-  --text-highlight-bg: rgba(245, 139, 137, 0.8);
-  --text-highlight-bg-active: rgba(245, 139, 137, 0.05);
-  --text-selection: rgba(245, 139, 137, 0.9);
+  --background-secondary-alt: var(--color-black);
+  --background-modifier-border: var(--color-gray-5);
+  --background-modifier-cover: rgba(255, 255, 255, 0.05);
+  --text-accent: var(--color-pink-3);
+  --text-accent-light: var(--color-pink-2);
+  --text-accent-hover: var(--text-accent);
+  --text-normal: var(--color-gray-0);
+  --text-code: var(--color-gray-0);
+  --text-faint: var(--text-code);
+  --text-muted: var(--color-gray-2);
+  --text-muted-rgb: 119, 119, 119;
+  --text-selection: rgba(245, 139, 137, 0.4);
   --text-on-accent: var(--color-white);
-  --interactive-normal: var(--color-gray-0);
-  --interactive-hover: var(--color-gray-3);
-  --interactive-accent: var(--color-pink-2);
-  --interactive-accent-rgba: 152, 202, 215;
-  --interactive-accent-hover: var(--color-pink-3);
-  --interactive-success: var(--color-green-5);
-  --scrollbar-active-thumb-bg: var(--text-accent);
-  --scrollbar-bg: var(--background-primary);
-  --scrollbar-thumb-bg: var(--text-accent);
-  --highlight-mix-blend-mode: normal;
-  --color-topic-tag-bg: var(--color-orange-4);
-  --cursor-bg: var(--color-pink-3);
-  --active-line-bg: rgba(var(--text-muted-rgb), 0.25);
-  --file-embed-border-color: var(--color-pink-2);
-  --file-embed-color: var(--color-gray-1);
-  --file-embed-hover-color: var(--color-gray-2);
-  --blockquote-border-color: var(--color-pink-2);
-  --text-footnote: var(--color-gray-0);
-  --text-indented-color: var(--color-blue-4);
-  --backticks-text-color: var(--color-blue-3);
-  --backticks-bg: var(--color-gray-9);
+  --text-highlight-bg: rgba(245, 139, 137, 0.8);
+  --interactive-accent: var(--text-accent-light);
+  --interactive-accent-hover: var(--text-accent);
+  --scrollbar-active-thumb-bg: var(--text-accent-light);
+  --scrollbar-bg: var(--background-primary-alt);
+  --scrollbar-thumb-bg: var(--color-pink-3);
+  --color-topic-tag: var(--text-normal);
+  --color-topic-tag-bg: var(--color-orange-5);
+  --cursor-bg: var(--color-white);
+  --active-line-bg: rgba(245, 139, 137, 0.05);
+  --file-embed-border-color: var(--scrollbar-active-thumb-bg);
+  --file-embed-color: var(--text-code);
+  --file-embed-hover-color: var(--text-muted);
+  --blockquote-bg: var(--color-gray-8);
+  --blockquote-font-color: var(--text-normal);
+  --blockquote-border-color: var(--color-pink-1);
+  --text-footnote: var(--color-gray-1);
+  --text-indented-color: var(--color-blue-3);
+  --backticks-text-color: var(--text-indented-color);
+  --backticks-bg: var(--color-gray-8);
+  --calendar-title: var(--text-code);
   --color-transparent: rgba(255, 255, 255, 0);
   --color-border: rgba(0, 0, 0, 0.2);
 }
@@ -976,6 +970,8 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
   --file-embed-border-color: var(--scrollbar-active-thumb-bg);
   --file-embed-color: var(--text-code);
   --file-embed-hover-color: var(--text-muted);
+  --blockquote-bg: var(--background-secondary-alt);
+  --blockquote-font-color: var(--text-code);
   --blockquote-border-color: var(--color-beige-2);
   --text-footnote: var(--color-gray-6);
   --text-indented-color: var(--color-blue-5);

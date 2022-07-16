@@ -2,5 +2,6 @@
   "legacyEditor": false,
   "livePreview": true,
   "defaultViewMode": "source",
-  "showFrontmatter": false
+  "showFrontmatter": false,
+  "alwaysUpdateLinks": true
 }
