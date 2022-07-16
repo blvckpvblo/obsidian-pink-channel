@@ -186,6 +186,9 @@ body .workspace-leaf .view-header {
 body .workspace-leaf .view-header-title {
   transition: color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+body .workspace-leaf.mod-active {
+  border-color: transparent !important;
+}
 body .workspace-leaf.mod-active .view-header {
   background-color: var(--background-primary);
 }
@@ -381,17 +384,18 @@ body .markdown-source-view.mod-cm6 .cm-active {
 body .markdown-preview-view blockquote {
   padding: calc(1rem * 1);
   margin: 0 0 calc(1rem * 1) 0;
-  background: var(--background-primary-alt);
+  background: var(--background-secondary-alt);
   color: var(--text-code);
   font-style: italic;
   line-height: 2;
   border-radius: 6px;
   border-width: 1px;
+  border-color: var(--color-transparent);
 }
 
 body .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
   padding: calc(1rem * 1);
-  background-color: var(--background-primary-alt);
+  background-color: var(--background-secondary-alt);
   border-left-color: var(--blockquote-border-color);
 }
 body .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote .cm-quote {
@@ -451,6 +455,9 @@ body .markdown-preview-view pre[class*=language] .copy-code-button:hover {
   transition: background-color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1);
   background-color: var(--interactive-accent);
   color: var(--text-on-accent);
+}
+body .markdown-preview-view pre[class*=language] code .url {
+  color: var(--text-accent);
 }
 
 body .markdown-source-view.mod-cm6 .HyperMD-codeblock {
@@ -941,39 +948,40 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
 
 .theme-light {
   --background-primary: var(--color-white);
-  --background-primary-alt: var(--color-beige-1);
-  --background-secondary: var(--color-beige-0);
+  --background-primary-alt: var(--color-beige-0);
+  --background-secondary: var(--background-primary-alt);
   --background-secondary-alt: var(--color-beige-1);
-  --background-modifier-border: var(--color-beige-2);
+  --background-modifier-border: var(--color-beige-1);
   --background-modifier-cover: rbga(0, 0, 0, 0.1);
-  --text-accent: var(--color-pink-5);
-  --text-accent-light: var(--color-pink-3);
-  --text-accent-hover: var(--text-accent-light);
+  --text-accent: var(--color-pink-3);
+  --text-accent-light: var(--color-pink-2);
+  --text-accent-hover: var(--text-accent);
   --text-normal: var(--color-black);
   --text-code: var(--color-gray-7);
-  --text-muted: var(--color-gray-4);
-  --text-muted-rgb: 143, 143, 143;
+  --text-faint: var(--text-code);
+  --text-muted: var(--color-gray-5);
+  --text-muted-rgb: 119, 119, 119;
   --text-selection: rgba(245, 139, 137, 0.2);
   --text-on-accent: var(--color-white);
   --text-highlight-bg: rgba(245, 139, 137, 0.8);
-  --interactive-accent: var(--color-pink-2);
-  --interactive-accent-hover: var(--color-pink-3);
-  --scrollbar-active-thumb-bg: var(--interactive-accent-hover);
-  --scrollbar-bg: var(--background-primary);
-  --scrollbar-thumb-bg: var(--interactive-accent);
-  --color-topic-tag: var(--color-white);
+  --interactive-accent: var(--text-accent-light);
+  --interactive-accent-hover: var(--text-accent);
+  --scrollbar-active-thumb-bg: var(--text-accent-light);
+  --scrollbar-bg: var(--background-primary-alt);
+  --scrollbar-thumb-bg: var(--color-pink-1);
+  --color-topic-tag: var(--background-primary);
   --color-topic-tag-bg: var(--color-orange-4);
-  --cursor-bg: var(--color-pink-3);
+  --cursor-bg: var(--color-white);
   --active-line-bg: rgba(245, 139, 137, 0.05);
-  --file-embed-border-color: var(--color-beige-4);
-  --file-embed-color: var(--color-gray-2);
-  --file-embed-hover-color: var(--color-gray-4);
-  --blockquote-border-color: var(--color-beige-3);
+  --file-embed-border-color: var(--scrollbar-active-thumb-bg);
+  --file-embed-color: var(--text-code);
+  --file-embed-hover-color: var(--text-muted);
+  --blockquote-border-color: var(--color-beige-2);
   --text-footnote: var(--color-gray-6);
   --text-indented-color: var(--color-blue-5);
-  --backticks-text-color: var(--color-blue-6);
+  --backticks-text-color: var(--text-indented-color);
   --backticks-bg: var(--color-gray-0);
-  --calendar-title: var(--color-gray-8);
+  --calendar-title: var(--text-code);
   --color-transparent: rgba(255, 255, 255, 0);
   --color-border: rgba(0, 0, 0, 0.2);
 }
