@@ -2,11 +2,16 @@
     .workspace {
         &-leaf {
             .view-header {
-                transition: transition(border-bottom, $transition-speed-slow), transition(background-color, $transition-speed-slow);
+                transition: transition(border-bottom, $transition-speed-slow),
+                    transition(background-color, $transition-speed-slow);
 
                 &-title {
                     transition: transition(color, $transition-speed-slow);
                 }
+            }
+
+            &.mod-active {
+                border-color: transparent !important;
             }
 
             &.mod-active .view-header {
@@ -17,7 +22,7 @@
                     &-container::before,
                     &-container::after {
                         background: none !important;
-                    } 
+                    }
                 }
             }
         }
