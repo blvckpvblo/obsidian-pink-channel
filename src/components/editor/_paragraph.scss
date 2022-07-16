@@ -3,3 +3,9 @@
         line-height: $line-height-default;
     }
 }
+
+@include editor-live-preview-component {
+    .cm-line {
+        line-height: $line-height-l;
+    }
+}
