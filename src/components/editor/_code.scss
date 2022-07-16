@@ -75,6 +75,10 @@
         }
 
         @include copy-button-style();
+
+        code .url {
+            color: var(--text-accent);
+        }
     }
 }
 

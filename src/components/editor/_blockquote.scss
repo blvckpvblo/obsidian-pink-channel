@@ -3,20 +3,21 @@
         padding: $space;
         margin: 0 0 $space 0;
 
-        background: var(--background-primary-alt);
+        background: var(--background-secondary-alt);
         color: var(--text-code);
         font-style: italic;
         line-height: $line-height-l;
 
         border-radius: $border-radius-default;
         border-width: 1px;
+        border-color: var(--color-transparent);
     }
 }
 
 @include editor-live-preview-component {
     &.is-live-preview .HyperMD-quote {
         padding: $space;
-        background-color: var(--background-primary-alt);
+        background-color: var(--background-secondary-alt);
         border-left-color: var(--blockquote-border-color);
         
         .cm-quote {
