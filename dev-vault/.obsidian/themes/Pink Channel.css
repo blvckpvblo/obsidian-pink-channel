@@ -136,16 +136,12 @@ body {
 }
 
 body .dropdown {
-  border-width: 2px;
+  border-width: 1px;
   border-color: var(--background-modifier-border);
   border-radius: 6px;
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOTIuNCIgaGVpZ2h0PSIyOTIuNCI+PHBhdGggZmlsbD0iIzAwMCIgZD0iTTI4NyA2OS40YTE3LjYgMTcuNiAwIDAgMC0xMy01LjRIMTguNGMtNSAwLTkuMyAxLjgtMTIuOSA1LjRBMTcuNiAxNy42IDAgMCAwIDAgODIuMmMwIDUgMS44IDkuMyA1LjQgMTIuOWwxMjggMTI3LjljMy42IDMuNiA3LjggNS40IDEyLjggNS40czkuMi0xLjggMTIuOC01LjRMMjg3IDk1YzMuNS0zLjUgNS40LTcuOCA1LjQtMTIuOCAwLTUtMS45LTkuMi01LjUtMTIuOHoiLz48L3N2Zz4=);
   cursor: pointer;
 }
 
-body [data-type=file-explorer] .nav-files-container {
-  padding: 1rem;
-}
 body [data-type=file-explorer] .nav-files-container .nav-folder-title,
 body [data-type=file-explorer] .nav-files-container .nav-file-title {
   white-space: normal;
@@ -153,10 +149,6 @@ body [data-type=file-explorer] .nav-files-container .nav-file-title {
   border-left: 5px, solid, transparent;
   transition: background-color 0.75s cubic-bezier(0.075, 0.82, 0.165, 1), border-left 0.75s cubic-bezier(0.075, 0.82, 0.165, 1), color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   margin-bottom: 0.25rem;
-}
-body [data-type=file-explorer] .nav-files-container .nav-folder-title:hover,
-body [data-type=file-explorer] .nav-files-container .nav-file-title:hover {
-  border-left: 5px, solid, var(--interactive-hover);
 }
 body [data-type=file-explorer] .nav-files-container .nav-folder-title .nav-file-title.is-active,
 body [data-type=file-explorer] .nav-files-container .nav-file-title .nav-file-title.is-active {
@@ -176,7 +168,7 @@ body .titlebar {
 }
 body .titlebar-inner {
   background: var(--background-secondary-alt);
-  color: var(--text-normal);
+  color: var(--text-code);
 }
 body .titlebar-text {
   top: 5px;
@@ -262,7 +254,6 @@ body .prompt-results .suggestion-item.is-selected {
 }
 
 body .frontmatter-container {
-  border: 1px, solid, var(--background-modifier-border);
   background-color: var(--background-secondary);
   border-radius: 10px;
   padding: calc((2rem) * 1) calc(1rem * 1);
@@ -301,7 +292,7 @@ body .status-bar {
   max-height: none;
   height: 27px;
   width: 100%;
-  background-color: var(--background-primary-alt);
+  background-color: var(--background-secondary-alt);
   color: var(--text-muted);
   font-size: 14px;
   font-family: var(--editor-font);
@@ -325,17 +316,11 @@ body .status-bar-item svg, body .status-bar-item-segment svg {
 
 body .workspace-tabs .workspace-tab-header-container {
   display: flex;
-  justify-content: center;
-  height: fit-content;
-  padding-top: calc((1rem / 2) * 1);
-  padding-right: 0;
-  padding-left: 0;
-  padding-bottom: calc((1rem / 2) * 1);
+  height: 30px;
+  padding-top: 2px;
+  flex: 0 0 auto;
 }
 body .workspace-tab-container-inner {
-  min-height: 35px;
-  background-color: var(--background-secondary);
-  border: 2px solid var(--interactive-normal);
   border-radius: 6px;
   flex-wrap: wrap;
 }
@@ -350,7 +335,6 @@ body .workspace-tab-header-inner-icon {
   align-items: center;
 }
 body .workspace-tab-header {
-  border: 2px solid var(--color-transparent);
   color: var(--text-muted);
   cursor: pointer;
 }
@@ -358,17 +342,11 @@ body .workspace-tab-header svg {
   width: 15px;
   height: 15px;
 }
-body .workspace-tab-header.is-active {
-  background-color: var(--interactive-accent);
-  color: var(--text-on-accent);
-  border-radius: 6px;
-  border: 2px solid var(--interactive-accent-hover);
-}
 body .workspace-tab-header.is-active svg {
-  color: var(--text-bright);
+  color: var(--text-muted);
 }
 body .workspace-tab-header.is-active:hover svg {
-  color: var(--text-bright);
+  color: var(--interactive-accent-hover);
 }
 body .workspace-tab-header:not(.is-active):hover {
   color: var(--interactive-accent-hover);
@@ -972,7 +950,7 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
   --background-primary-alt: var(--color-beige-1);
   --background-secondary: var(--color-beige-0);
   --background-secondary-alt: var(--color-beige-1);
-  --background-modifier-border: var(--color-beige-1);
+  --background-modifier-border: var(--color-beige-2);
   --background-modifier-form-field: var(--color-beige-0);
   --background-modifier-form-field-highlighted: var(--color-beige-0);
   --background-modifier-box-shadow: rgba(0, 0, 0, 0.3);
@@ -999,7 +977,7 @@ body.plugin-sliding-panes-rotate-header div.workspace > .mod-root > .workspace-l
   --interactive-normal: var(--color-gray-0);
   --interactive-hover: var(--color-gray-3);
   --interactive-accent: var(--color-pink-2);
-  --interactive-accent-rgba: 152, 202, 215;
+  --interactive-accent-rgb: 245, 139, 137;
   --interactive-accent-hover: var(--color-pink-3);
   --interactive-success: var(--color-green-5);
   --scrollbar-active-thumb-bg: var(--interactive-accent-hover);

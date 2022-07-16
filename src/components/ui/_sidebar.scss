@@ -4,22 +4,12 @@
 
     .workspace-tabs .workspace-tab-header-container {
         display: flex;
-        justify-content: center;
-
-        height: fit-content;
-
-        padding: {
-            top: $space-s;
-            right: 0;
-            left: 0;
-            bottom: $space-s;
-        }
+        height: 30px;
+        padding-top: 2px;
+        flex: 0 0 auto;
     }
 
     .workspace-tab-container-inner {
-        min-height: $size-tab-header;
-        background-color: var(--background-secondary);
-        border: $border-width-default solid var(--interactive-normal);
         border-radius: $border-radius-default;
         flex-wrap: wrap;
     }
@@ -37,7 +27,6 @@
     }
 
     .workspace-tab-header {
-        border: $border-width-default solid var(--color-transparent);
         color: var(--text-muted);
         cursor: pointer;
 
@@ -47,19 +36,13 @@
         }
 
         &.is-active {
-            background-color: var(--interactive-accent);
-            color: var(--text-on-accent);
-
-            border-radius: $border-radius-default;
-            border: $border-width-default solid var(--interactive-accent-hover);
-
             svg {
-                color: var(--text-bright);
+                color: var(--text-muted);
             }
 
             &:hover {
                 svg {
-                    color: var(--text-bright);
+                    color: var(--interactive-accent-hover);
                 }
             }
         }
