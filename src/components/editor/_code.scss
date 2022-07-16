@@ -4,6 +4,7 @@
 
 @mixin code-block-style {
     .HyperMD-codeblock {
+        background-color: var(--background-secondary);
         @include code-color();
     }
 }
@@ -75,11 +76,6 @@
 
         @include copy-button-style();
     }
-}
-
-@include editor-source-component {
-    @include code-block-style();
-    @include inline-code-style();
 }
 
 @include editor-live-preview-component {

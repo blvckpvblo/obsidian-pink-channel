@@ -1,5 +1,5 @@
-@include editor-source-component {
-    .CodeMirror-activeline {
+@include editor-live-preview-component {
+    .cm-active {
         background: var(--active-line-bg);
     }
 }

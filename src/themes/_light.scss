@@ -11,8 +11,10 @@
     --text-normal: var(--color-black);
     --text-code: var(--color-gray-7);
     --text-muted: var(--color-gray-4);
+    --text-muted-rgb: 143, 143, 143;
     --text-selection: rgba(245, 139, 137, 0.2);
     --text-on-accent: var(--color-white);
+    --text-highlight-bg: rgba(245, 139, 137, 0.8);
     --interactive-accent: var(--color-pink-2);
     --interactive-accent-hover: var(--color-pink-3);
     --scrollbar-active-thumb-bg: var(--interactive-accent-hover);
@@ -21,7 +23,7 @@
     --color-topic-tag: var(--color-white);
     --color-topic-tag-bg: var(--color-orange-4);
     --cursor-bg: var(--color-pink-3);
-    --active-line-bg: rgba(var(--text-muted-rgb), 0.25);
+    --active-line-bg: rgba(245, 139, 137, 0.05);
     --file-embed-border-color: var(--color-beige-4);
     --file-embed-color: var(--color-gray-2);
     --file-embed-hover-color: var(--color-gray-4);

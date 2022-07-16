@@ -11,7 +11,7 @@
 }
 
 @mixin editor-source-component {
-    body .markdown-source-view .CodeMirror {
+    body .markdown-source-view.mod-cm6 {
         @content;
     }
 }
