@@ -10,6 +10,12 @@
                 }
             }
 
+            .view-content {
+                .tree-item .tree-item-inner {
+                    color: var(--text-accent);
+                }
+            }
+
             &.mod-active {
                 border-color: transparent !important;
             }
