@@ -43,10 +43,7 @@ $checked-svg: 'data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox
             &.is-checked {
                 color: var(--text-muted);
 
-                .internal-link,
-                .external-link {
-                    filter: opacity(0.5);
-                }
+                filter: opacity(0.7);
             }
 
             &-checkbox {
