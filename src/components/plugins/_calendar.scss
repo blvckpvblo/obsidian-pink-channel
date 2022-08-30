@@ -36,11 +36,11 @@
 
                     .dot-container {
                         .dot.filled {
-                            fill: var(--background-primary);
+                            fill: var(--text-accent);
                         }
 
                         .hollow {
-                            stroke: var(--background-primary);
+                            stroke: var(--text-accent);
                         }
                     }
 
