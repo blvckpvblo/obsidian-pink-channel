@@ -156,6 +156,10 @@ body [data-type=file-explorer] .nav-files-container .nav-folder-title .nav-file-
 body [data-type=file-explorer] .nav-files-container .nav-file-title .nav-file-title.is-active {
   border-left: 5px, solid, var(--interactive-accent);
 }
+body .nav-files-container .nav-folder-children .nav-file.has-focus .nav-file-title.is-active {
+  background-color: var(--text-accent);
+  color: var(--text-on-accent);
+}
 
 body .suggestion-container {
   border-radius: 6px;
@@ -187,6 +191,13 @@ body .workspace-leaf .view-header {
 }
 body .workspace-leaf .view-header-title {
   transition: color 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+body .workspace-leaf .view-content .tree-item .tree-item-inner,
+body .workspace-leaf .view-content .tree-item .tree-item-flair {
+  color: var(--text-accent);
+}
+body .workspace-leaf .view-content .tree-item:hover .tree-item-flair {
+  color: var(--text-on-accent);
 }
 body .workspace-leaf.mod-active {
   border-color: transparent !important;
@@ -253,7 +264,7 @@ body .prompt-results .suggestion-item .suggestion-hotkey {
   color: var(--text-code);
 }
 body .prompt-results .suggestion-item.is-selected {
-  background-color: var(--background-secondary-alt);
+  background-color: var(--text-accent);
   color: var(--text-normal);
   border-left: 5px, solid, var(--interactive-accent);
 }
@@ -743,10 +754,7 @@ body .markdown-preview-view ul.contains-task-list .task-list-item {
 }
 body .markdown-preview-view ul.contains-task-list .task-list-item.is-checked {
   color: var(--text-muted);
-}
-body .markdown-preview-view ul.contains-task-list .task-list-item.is-checked .internal-link,
-body .markdown-preview-view ul.contains-task-list .task-list-item.is-checked .external-link {
-  filter: opacity(0.5);
+  filter: opacity(0.7);
 }
 body .markdown-preview-view ul.contains-task-list .task-list-item-checkbox {
   width: 16px;
@@ -835,10 +843,10 @@ body #calendar-container .calendar tbody tr td .day.active {
   color: var(--background-primary);
 }
 body #calendar-container .calendar tbody tr td .day .dot-container .dot.filled {
-  fill: var(--background-primary);
+  fill: var(--text-accent);
 }
 body #calendar-container .calendar tbody tr td .day .dot-container .hollow {
-  stroke: var(--background-primary);
+  stroke: var(--text-accent);
 }
 body #calendar-container .calendar tbody tr td .day:hover {
   color: var(--background-primary);

@@ -11,8 +11,18 @@
             }
 
             .view-content {
-                .tree-item .tree-item-inner {
-                    color: var(--text-accent);
+                .tree-item {
+
+                    .tree-item-inner,
+                    .tree-item-flair {
+                        color: var(--text-accent);
+                    }
+
+                    &:hover {
+                        .tree-item-flair {
+                            color: var(--text-on-accent);
+                        }
+                    }
                 }
             }
 
@@ -24,6 +34,7 @@
                 background-color: var(--background-primary);
 
                 &-title {
+
                     // Blend out the gradients in the headers
                     &-container::before,
                     &-container::after {
