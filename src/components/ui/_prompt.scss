@@ -37,7 +37,7 @@
                     }
 
                     &.is-selected {
-                        background-color: var(--background-secondary-alt);
+                        background-color: var(--text-accent);
                         color: var(--text-normal);
                         border-left: border($border-width, var(--interactive-accent));
                     }
