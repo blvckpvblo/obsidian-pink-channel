@@ -3,6 +3,7 @@
         $border-width: 5px;
 
         .nav-files-container {
+
             .nav-folder-title,
             .nav-file-title {
                 @include wrap-title-and-folder-names();
@@ -18,6 +19,16 @@
                             border-left: border($border-width, var(--interactive-accent));
                         }
                     }
+                }
+            }
+        }
+    }
+
+    .nav-files-container {
+        .nav-folder-children {
+            .nav-file.has-focus {
+                .nav-file-title.is-active {
+                    background-color: var(--text-accent);
                 }
             }
         }
