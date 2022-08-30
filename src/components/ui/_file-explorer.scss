@@ -29,6 +29,7 @@
             .nav-file.has-focus {
                 .nav-file-title.is-active {
                     background-color: var(--text-accent);
+                    color: var(--text-on-accent);
                 }
             }
         }
