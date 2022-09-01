@@ -829,7 +829,7 @@ body .markdown-preview-view p {
 }
 
 body .markdown-source-view.mod-cm6 .cm-line {
-  line-height: 2;
+  line-height: 1.25;
 }
 
 body .markdown-preview-view .tag:not(.token) {
