@@ -21,6 +21,8 @@ $checked-svg: 'data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox
     border-radius: 30%;
     border: 2px solid var(--text-muted);
     padding: 0;
+
+    cursor: pointer;
 }
 
 @mixin checkbox-sytle-checked {
@@ -30,6 +32,8 @@ $checked-svg: 'data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox
     background-size: 68%;
     background-repeat: no-repeat;
     background-image: url($checked-svg);
+
+    cursor: pointer;
 }
 
 @include editor-preview-component {
