@@ -609,6 +609,9 @@ body .markdown-preview-view .internal-link:hover {
 body .markdown-source-view.mod-cm6 .cm-hmd-internal-link {
   font-weight: 700;
 }
+body .markdown-source-view.mod-cm6 .cm-hmd-internal-link .is-unresolved {
+  opacity: 0.8;
+}
 body .markdown-source-view.mod-cm6 .cm-hmd-internal-link:hover {
   cursor: pointer;
 }
@@ -795,7 +798,7 @@ body .markdown-source-view.mod-cm6 .HyperMD-list-line[data-task~="-"], body .mar
   color: var(--text-normal);
 }
 body .markdown-source-view.mod-cm6 .HyperMD-list-line[data-task~="-"] *:not(.task-list-label):not(.task-list-item-checkbox), body .markdown-source-view.mod-cm6 .HyperMD-list-line[data-task~=x] *:not(.task-list-label):not(.task-list-item-checkbox) {
-  filter: opacity(0.5);
+  filter: opacity(0.7);
 }
 body .markdown-source-view.mod-cm6 .HyperMD-list-line[data-task~="-"] .task-list-item-checkbox, body .markdown-source-view.mod-cm6 .HyperMD-list-line[data-task~=x] .task-list-item-checkbox {
   border: 2px solid var(--text-accent-hover);

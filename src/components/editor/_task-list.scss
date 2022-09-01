@@ -87,7 +87,7 @@ $checked-svg: 'data:image/svg+xml; utf8, <svg width="12px" height="10px" viewBox
 
             // dimm everything except the checkbox
             *:not(.task-list-label):not(.task-list-item-checkbox) {
-                filter: opacity(0.5);
+                filter: opacity(0.7);
             }
 
             // style the checked checkbox
