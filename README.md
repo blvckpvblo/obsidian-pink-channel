@@ -1,4 +1,4 @@
-# Obsidian Atom
+# Pink Channel
 
 A light & dark them for Obsidian.
 
