@@ -104,8 +104,10 @@ This is my **bold** and _italic_ example.
    1. Item 3b
 ```
 
+^36643c
+
 - Item 1
-- Item 2
+- Item 2 ^1f29dd
   - Item 2a
   - Item 2b
 
@@ -212,6 +214,8 @@ function fancyAlert(arg) {
   }
 }
 ```</code></pre>
+
+^8b131b
 
 ```js
 function fancyAlert(arg) {
